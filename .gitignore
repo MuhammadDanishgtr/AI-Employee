@@ -14,10 +14,13 @@ build/
 venv/
 
 # Credentials - NEVER commit these
+credentials/
 credentials.json
 token.json
 *.pem
 *.key
+*_token.json
+linkedin_session/
 
 # OS
 .DS_Store

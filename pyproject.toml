@@ -1,11 +1,20 @@
 [project]
 name = "ai-employee"
-version = "0.1.0"
-description = "Personal AI Employee - Bronze Tier"
+version = "0.2.0"
+description = "Personal AI Employee - Silver Tier"
 requires-python = ">=3.13"
 dependencies = [
     "watchdog>=4.0.0",
+    "google-auth>=2.0.0",
+    "google-auth-oauthlib>=1.0.0",
+    "google-api-python-client>=2.0.0",
+    "apscheduler>=3.10.0",
+    "playwright>=1.40.0",
+    "python-dotenv>=1.0.0",
+    "mcp>=1.0.0",
 ]
 
 [project.scripts]
 file-watcher = "watchers.filesystem_watcher:main"
+gmail-watcher = "watchers.gmail_watcher:main"
+orchestrator = "watchers.orchestrator:main"

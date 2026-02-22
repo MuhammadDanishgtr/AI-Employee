@@ -71,6 +71,31 @@ The watcher monitors `AI_Employee_Vault/Drop_Folder/` and automatically creates 
 | `/update-dashboard` | Refresh `Dashboard.md` with current vault status |
 | `/vault-manager` | Manage vault files, create plans, check approvals, archive items |
 
+## Hackathon Tier
+
+**Tier: Bronze** — Panaversity Hackathon 0
+
+| Requirement | Status |
+|-------------|--------|
+| Obsidian vault with `Dashboard.md` & `Company_Handbook.md` | ✅ |
+| One working Watcher script (File System) | ✅ |
+| Claude Code reading from & writing to the vault | ✅ |
+| Basic folder structure `/Inbox`, `/Needs_Action`, `/Done` | ✅ |
+| All AI functionality implemented as Agent Skills | ✅ |
+| Public GitHub repository with README | ✅ |
+| Docker image & container | ✅ |
+
+## Security
+
+Credentials are **never** stored in the vault or committed to version control.
+
+- All secrets (API keys, tokens) are loaded via **environment variables** from a `.env` file
+- `.env` is listed in `.gitignore` — see `.env.example` for the required variables
+- The Obsidian vault is **local-first** — no sensitive data is sent to external services without explicit human approval
+- Sensitive actions (payments, new contacts, bulk sends) require human approval via the `/Pending_Approval/` workflow before any action is taken
+- All AI actions are logged with timestamp, actor, and result in `Logs/YYYY-MM-DD.json`
+- Credentials should be rotated monthly and after any suspected breach
+
 ## License
 
 MIT

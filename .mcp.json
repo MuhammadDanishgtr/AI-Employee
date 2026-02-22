@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gmail-send": {
+      "type": "stdio",
+      "command": "py",
+      "args": ["mcp_servers/gmail_send/server.py"],
+      "env": {
+        "VAULT_PATH": "D:/hackathon-0-PersonalAI-Employee/AI_Employee_Vault",
+        "GMAIL_CREDENTIALS_PATH": "./credentials/gmail_credentials.json",
+        "GMAIL_TOKEN_PATH": "./credentials/gmail_token.json"
+      }
+    }
+  }
+}
